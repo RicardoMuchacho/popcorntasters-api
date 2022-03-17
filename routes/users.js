@@ -41,7 +41,6 @@ router.put("/:user", async (req, res) => {
 router.delete("/:user", async (req, res) => {
   try {
     delete_username = req.params.user;
-    //r = await Animal.deleteOne({ name: delete_name});
 
     r = await User.findOneAndDelete({ username: delete_username });
     res.send(JSON.stringify("Deleted, " + r));
