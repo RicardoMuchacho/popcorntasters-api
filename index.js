@@ -18,7 +18,7 @@ app.use(
 );
 
 app.get("/", async (req, res) => {
-  res.send(JSON.stringify("working app"));
+  res.send(JSON.stringify("popcorntasters app - working api"));
 });
 
 //routes
