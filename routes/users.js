@@ -64,6 +64,7 @@ router.get("/:user/comments", async (req, res) => {
 router.put("/:user/movies", async (req, res) => {
   username = req.params.user;
   movie_id = req.body.id;
+  movie_title = req.body.title;
 
   movie = await Movie.findOne({ id: movie_id });
   movie_title = movie.title;
