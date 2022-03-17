@@ -3,6 +3,7 @@ var router = express.Router();
 const dotenv = require("dotenv");
 var Movie = require("../models/movie");
 var Comment = require("../models/comment");
+var Rating = require("../models/rating");
 const db = require("../helpers/db.js");
 const api = require("../helpers/api.js");
 
@@ -36,12 +37,15 @@ router.get("/details/:id", async (req, res) => {
     r = await api.movie_details(movie_id);
   }
   comments = await Comment.find({ movie_id: movie_id });
+  ratings = await Rating.find({ movie_id: movie_id });
 
   res.send(
     '{"details":' +
       JSON.stringify(r) +
       ', "comments":' +
       JSON.stringify(comments) +
+      ', "ratings":' +
+      JSON.stringify(ratings) +
       "}"
   );
 });
