@@ -21,7 +21,6 @@ router.put("/:user", async (req, res) => {
     new_password = req.body.password;
 
     encrypted_password = await bcrypt.hash(new_password, 10);
-
     const query = { username: prev_username };
 
     r = await User.findOneAndUpdate(
