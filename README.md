@@ -25,5 +25,5 @@ Desarrolladores: Figueroa Alonso, C.I. V-28536894 y Muchacho Ricardo, C.I. V-278
 ### *2. Heroku como motor de la aplicación (El servidor se encuentra en la nube).*
 
 
-### *4. Además...*
+### *3. Además...*
 Puedes revisar el [repositorio que contiene el código del frontend.](https://github.com/alonfigue/popcorntasters)
