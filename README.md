@@ -13,7 +13,7 @@ Desarrolladores: Figueroa Alonso, C.I. V-28536894 y Muchacho Ricardo, C.I. V-278
 
 ### *1. Utiliza herramientas/módulos como:*
 - La API que proporciona IMDb.
-- JWT
+- JWT (para la creación de tokens de acceso que permiten la propagación de identidad y privilegios).
 - Mongoose (biblioteca de programación orientada a objetos de JavaScript que crea una conexión entre MongoDB y el marco de la aplicación web Express):
     - Esquemas en Mongoose (estructura JSON que contiene información acerca de las propiedades de un documento).
 - Morgan (middleware para la captura de solicitudes HTTP para Node. js para su posterior registro y seguimiento).
