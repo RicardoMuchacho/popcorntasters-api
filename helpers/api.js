@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 
 const movies_list = " ";
 
-//https://imdb-api.com/API/SearchMovie/k_c6lgeg7d/Uncharted
+//https://imdb-api.com/API/SearchMovie/API_KEY/Uncharted
 
 const movies_by_title = async (title) => {
   const response = await fetch(
@@ -69,7 +69,7 @@ async function popular_movies() {
   return movies;
 }
 
-//https://imdb-api.com/en/API/Title/k_c6lgeg7d/tt1877830/Trailer
+//https://imdb-api.com/en/API/Title/API_KEY/tt1877830/Trailer
 async function movie_details(movie_id) {
   const response = await fetch(
     "https://imdb-api.com/en/API/Title/" +
