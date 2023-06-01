@@ -1,7 +1,7 @@
 const fetch = require("node-fetch");
-const api_key = "k_c6lgeg7d";
 const Movie = require("../models/movie");
 const db = require("./db.js");
+const dotenv = require('dotenv');
 
 const movies_list = " ";
 
@@ -9,7 +9,7 @@ const movies_list = " ";
 
 const movies_by_title = async (title) => {
   const response = await fetch(
-    "https://imdb-api.com/API/SearchMovie/" + api_key + "/" + title,
+    "https://imdb-api.com/API/SearchMovie/" + process.env.API_KEY + "/" + title,
     {
       method: "GET",
     }
@@ -39,7 +39,7 @@ const movies_by_title = async (title) => {
 async function popular_movies() {
   var movies = [Movie];
 
-  fetch("https://imdb-api.com/en/API/MostPopularMovies/" + api_key, {
+  fetch("https://imdb-api.com/en/API/MostPopularMovies/" + process.env.API_KEY, {
     method: "GET",
   })
     .then((response) => {
@@ -73,7 +73,7 @@ async function popular_movies() {
 async function movie_details(movie_id) {
   const response = await fetch(
     "https://imdb-api.com/en/API/Title/" +
-      api_key +
+      process.env.API_KEY +
       "/" +
       movie_id +
       "/Trailer",
